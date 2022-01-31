@@ -5,7 +5,7 @@ export const LoginScreen = () => {
   return (
     <>
       <h3 className="auth__title mb-5">
-        <i class="fa-solid fa-user-large fa-3x mb-5"></i>
+        <i className="fa-solid fa-user-large fa-3x mb-5"></i>
         <span>Login</span>
       </h3>
       <form>

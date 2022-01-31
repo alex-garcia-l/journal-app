@@ -5,7 +5,7 @@ export const RegisterScreen = () => {
   return (
     <>
       <h3 className="auth__title mb-5">
-        <i class="fa-solid fa-user-plus fa-3x mb-5"></i>
+        <i className="fa-solid fa-user-plus fa-3x mb-5"></i>
         <span>Register</span>
       </h3>
       
