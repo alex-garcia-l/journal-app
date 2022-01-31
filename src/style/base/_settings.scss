@@ -1,0 +1,24 @@
+// Colors
+$primary: #8946A6;
+$primary-darken: darken($color: $primary, $amount: 12);
+$primary-light: lighten($color: $primary, $amount: 12);
+
+$secondary: #325288;
+$secondary-darken: darken($color: $secondary, $amount: 10);
+$secondary-light: lighten($color: $secondary, $amount: 10);
+
+$third: #FF5959;
+$third-darken: darken($color: $third, $amount: 5);
+$third-light: lighten($color: $third, $amount: 5);
+
+$white: #EAEAEA;
+$white-darken: darken($color: $white, $amount: 15);
+$white-light: lighten($color: $white, $amount: 15);
+
+$dark-grey: #181D31;
+$light-grey: #d8d8d8;
+
+// Button google
+$white-google: #FFFFFF;
+$google-blue: #4285f4;
+$button-active-blue: #1669f2;

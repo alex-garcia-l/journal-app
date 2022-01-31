@@ -1,0 +1,16 @@
+.input {
+  color: $dark-grey;
+  border: 1px solid $white-darken;
+  font-size: 16px;
+  margin-bottom: 18px;
+  height: 30px;
+  width: 100%;
+  padding: 4px 6px;
+
+  transition: border .3s ease-in;
+
+  &:focus {
+    border: 1px solid $primary;
+    outline: none;
+  }
+}

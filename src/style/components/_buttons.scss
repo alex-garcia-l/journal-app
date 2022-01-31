@@ -1,0 +1,165 @@
+.btn {
+  background: transparent;
+  border: none;
+  color: $white;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 7px 10px 7px 10px;
+  text-decoration: none;
+  display: inline;
+
+  transition: background-color 0.3s ease-in,
+              color 0.3s ease-in;
+
+  &:focus {
+    outline: none;
+    text-decoration: none;
+  }
+
+  &:hover {
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+////////////////////////////////////////////////////////////
+
+.btn-primary {
+  background: $primary;
+  border-radius: 4px;
+
+  &:disabled {
+    background-color: $primary-light;
+  }
+  &:hover {
+    background-color: $primary-darken;
+  }
+}
+
+.btn-outline-primary {
+  border: 1px solid $primary;
+  border-radius: 4px;
+  color: $primary;
+  text-decoration: none;
+
+  &:hover {
+    color: $white;
+    background-color: $primary-darken;
+    text-decoration: none;
+  }
+
+  &:disabled {
+    background-color: $primary-light;
+  }
+}
+
+////////////////////////////////////////////////////////////
+
+.btn-secondary {
+  background: $secondary;
+  border-radius: 4px;
+
+  &:disabled {
+    background-color: $secondary-light;
+  }
+  &:hover {
+    background-color: $secondary-darken;
+  }
+}
+
+.btn-outline-secondary {
+  border: 1px solid $secondary;
+  border-radius: 4px;
+  color: $secondary;
+  text-decoration: none;
+
+  &:hover {
+    color: $white;
+    background-color: $secondary-darken;
+    text-decoration: none;
+  }
+
+  &:disabled {
+    background-color: $secondary-light;
+  }
+}
+
+.btn-third {
+  background: $third;
+  border-radius: 4px;
+
+  &:disabled {
+    background-color: $third-light;
+  }
+  &:hover {
+    background-color: $third-darken;
+  }
+}
+
+.btn-outline-third {
+  border: 1px solid $third;
+  border-radius: 4px;
+  color: $third;
+  text-decoration: none;
+
+  &:hover {
+    color: $white;
+    background-color: $third-darken;
+    text-decoration: none;
+  }
+
+  &:disabled {
+    background-color: $third-light;
+  }
+}
+
+.btn-block {
+  width: 100%;
+}
+
+
+// Button google
+.google-btn {
+  cursor: pointer;
+  margin-top: 5px;
+  width: 100%;
+  height: 42px;
+  background-color: $google-blue;
+  border-radius: 2px;
+
+  transition: box-shadow .3s ease;
+
+  .google-icon-wrapper {
+    position: absolute;
+    margin-top: 1px;
+    margin-left: 1px;
+    width: 40px;
+    height: 40px;
+    border-radius: 2px;
+    background-color: $white-google;
+  }
+
+  .google-icon {
+    position: absolute;
+    margin-top: 11px;
+    margin-left: 11px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .btn-text {
+    float: right;
+    margin: 11px 40px 0 0;
+    color: $white-google;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+  }
+
+  &:hover {
+    box-shadow: 0 0 6px $google-blue;
+  }
+
+  &:active {
+    background: $button-active-blue;
+  }
+}

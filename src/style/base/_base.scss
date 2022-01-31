@@ -1,0 +1,71 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100vh;
+  width: 100vw;
+}
+
+main {
+  width: 100%;
+}
+
+.mt-1 {
+  margin-top: 5px;
+}
+
+.mt-5 {
+  margin-top: 20px;
+}
+
+.mr-1 {
+  margin-right: 5px;
+}
+
+.mr-5 {
+  margin-right: 20px;
+}
+
+.mb-1 {
+  margin-bottom: 5px;
+}
+
+.mb-5 {
+  margin-bottom: 20px;
+}
+
+.ml-1 {
+  margin-left: 5px;
+}
+
+.ml-5 {
+  margin-left: 20px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+p {
+  font-size: 14px;
+}
+
+a {
+  font-size: 14px;
+  color: $primary;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+
+  transition: text-decoration 0.3s ease,
+              color 0.3s ease;
+
+  &:hover {
+    color: $primary-darken;
+    text-decoration: underline;
+  }
+}
