@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const JournalEntriItem = () => {
   return (
     <div className="journal__entry">

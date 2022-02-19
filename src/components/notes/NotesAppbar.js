@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const NotesAppbar = () => {
   return (
     <div className="notes__appbar">

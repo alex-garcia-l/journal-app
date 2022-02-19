@@ -1,4 +1,3 @@
-import React from 'react';
 import { JournalEntriItem } from './JournalEntriItem';
 
 export const JournalEntries = () => {

@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const NothingSelected = () => {
   return (
     <div className="nothing_main-content">

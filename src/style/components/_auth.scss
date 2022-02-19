@@ -46,11 +46,11 @@
 }
 
 .auth__alert-error {
-  background: red;
+  background: $third-darken;
   border-radius: 5px;
   color: $white;
   display: flex;
   justify-content: center;
-  margin-bottom: 10px;
-  padding-top: 5px;
+  margin-bottom: 18px;
+  padding: 5px;
 }
