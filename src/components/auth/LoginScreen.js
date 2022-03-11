@@ -26,7 +26,7 @@ export const LoginScreen = () => {
   }
 
   return (
-    <>
+    <div className="animate__animated animate__fadeIn animate__faster">
       <h3 className="auth__title mb-5">
         <i className="fa-solid fa-user-large fa-3x mb-5"></i>
         <span>Login</span>
@@ -80,6 +80,6 @@ export const LoginScreen = () => {
           </Link>
         </div>
       </form>
-    </>
+    </div>
   );
 };

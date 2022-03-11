@@ -3,6 +3,7 @@ import Swal from 'sweetalert2';
 import { types } from '../types/types';
 import { finishLoading, startLoading } from './ui';
 import { firebase, googleAuthProvider } from '../database/firebase-config';
+import { purgeNotes } from './note';
 
 export const startLogin = (email, password) => {
   return (dispatch) => {
@@ -48,6 +49,7 @@ export const startLogout = () => {
   return async (dispatch) => {
     await firebase.auth().signOut();
     dispatch(logout());
+    dispatch(purgeNotes());
   }
 }
 
