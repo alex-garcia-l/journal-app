@@ -7,7 +7,7 @@ import { uploadImage } from '../helpers/uploadImage';
 export const startNewNote = () => {
   return async (dispatch, getState) => {
     const { uid } = getState().auth;
-    
+
     const newNote = {
       title: '',
       body: '',
@@ -34,8 +34,8 @@ export const startUpdateNote = (note) => {
     if (!note.url) {
       delete note.url;
     }
-    
-    const noteUpdate = {...note};
+
+    const noteUpdate = { ...note };
     delete noteUpdate.id;
 
     await db.doc(`${uid}/journal/notes/${note.id}`).update(noteUpdate);
@@ -54,7 +54,7 @@ export const startUpdateNote = (note) => {
 
 export const startUploadImage = (file) => {
   return async (dispatch, getState) => {
-    const { active:note } = getState().notes;
+    const { active: note } = getState().notes;
 
     Swal.fire({
       title: 'Uploading',

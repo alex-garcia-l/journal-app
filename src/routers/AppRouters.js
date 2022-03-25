@@ -20,11 +20,11 @@ export const AppRouters = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    firebase.auth().onAuthStateChanged( (user) => {
+    firebase.auth().onAuthStateChanged((user) => {
       if (user?.uid) {
         dispatch(login(user.uid, user.displayName));
         setIsLoggedIn(true);
-        
+
         dispatch(startLoadingNotes(user.uid));
       } else {
         setIsLoggedIn(false);
@@ -41,24 +41,22 @@ export const AppRouters = () => {
 
   return (
     <Router>
-      <div>
-        <Switch>
-          <PublicRoute
-            isLoggedIn={isLoggedIn}
-            path="/auth"
-            component={AuthRouters} 
-          />
+      <Switch>
+        <PublicRoute
+          isLoggedIn={isLoggedIn}
+          path="/auth"
+          component={AuthRouters}
+        />
 
-          <PrivateRoute
-            isLoggedIn={isLoggedIn}
-            exact
-            path="/"
-            component={JournalScreen}
-          />
+        <PrivateRoute
+          isLoggedIn={isLoggedIn}
+          exact
+          path="/"
+          component={JournalScreen}
+        />
 
-          <Redirect to="/auth/login" />
-        </Switch>
-      </div>
+        <Redirect to="/auth/login" />
+      </Switch>
     </Router>
   );
 };

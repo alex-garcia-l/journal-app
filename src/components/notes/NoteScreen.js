@@ -7,8 +7,8 @@ import { NotesAppBar } from './NotesAppBar';
 export const NoteScreen = () => {
 
   const dispatch = useDispatch();
-  const { active: note } = useSelector( state => state.notes );
-  let [ formValues, handleInputChange, resetForm ] = useForm(note);
+  const { active: note } = useSelector(state => state.notes);
+  let [formValues, handleInputChange, resetForm] = useForm(note);
   const { title, body, id } = formValues;
   const activeId = useRef(note.id)
 
@@ -20,9 +20,9 @@ export const NoteScreen = () => {
   }, [note, resetForm]);
 
   useEffect(() => {
-    dispatch(setNoteActive(formValues.id, {...formValues}));
+    dispatch(setNoteActive(formValues.id, { ...formValues }));
   }, [formValues, dispatch]);
-  
+
   const handleDelete = () => {
     dispatch(startDeleteNote(id));
   }
@@ -32,7 +32,7 @@ export const NoteScreen = () => {
       <NotesAppBar />
 
       <div className="notes__content">
-        <input 
+        <input
           type="text"
           placeholder="Some awesome title"
           className="notes__title-input"
@@ -52,10 +52,10 @@ export const NoteScreen = () => {
         ></textarea>
 
         {
-          note.url && 
+          note.url &&
           (
             <div className="notes__image">
-              <img 
+              <img
                 src={note.url}
                 alt={title}
               />

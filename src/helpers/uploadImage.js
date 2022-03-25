@@ -1,9 +1,9 @@
-export const uploadImage = async (file) => {
+export const uploadImage = async (file, path = 'journal/images') => {
   const baseUrl = 'https://api.cloudinary.com/v1_1/dqradtulc/image/upload';
   const data = new FormData();
 
   data.append('upload_preset', 'journal');
-  data.append('folder', 'journal/images');
+  data.append('folder', path);
   data.append('file', file);
   
   try {
@@ -15,7 +15,7 @@ export const uploadImage = async (file) => {
     if (response.ok) {
       return await response.json();
     } else {
-      throw await response.json();
+      return null;
     }
   } catch (error) {
     throw error;
